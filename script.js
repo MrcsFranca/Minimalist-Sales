@@ -1,3 +1,8 @@
+// Search
+let input = document.getElementById('search-bar').value
+input = input.toLowerCase()
+
+
 // Variables
 const controls = document.querySelectorAll('.control')
 let currentItem = 0;

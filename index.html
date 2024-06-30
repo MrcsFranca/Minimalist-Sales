@@ -14,7 +14,7 @@
                 <nav class="navbar ">
                     <div class="container-fluid">
                       <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <input id="search-bar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onkeyup="search()">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                       </form>
                     </div>
@@ -27,213 +27,76 @@
         <div class="categories-container container-fluid">
             <div class="categories">
                 <div class="category-title">
-                    <h4>Categoria</h4>
+                    <h4>Eletrônicos</h4>
                 </div>
                 <div class="product-section">
-                    <div class="objects">
-                        <div class="object">
-                            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="assets/images/1738866-linda-agua-azul-em-uma-praia-tropical-foto.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                              <h5 class="card-title">Card title</h5>
-                                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                                            </div>
-                                          </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="..." class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                              <h5 class="card-title">Card title</h5>
-                                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                                            </div>
-                                          </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="..." class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                              <h5 class="card-title">Card title</h5>
-                                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                                            </div>
-                                          </div>
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                                </div>
+                    <div class="container-fluid objects">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/4881312-sunset-on-maldives-island-luxury-water-villas-resort-and-wooden-pier-beautiful-sky-and-clouds-and-beach-background-for-summer-vacation-holiday-and-travel-concept-foto.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/1738866-linda-agua-azul-em-uma-praia-tropical-foto.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="category-title">
-                    <h4>Categoria 2</h4>
+                    <h4>Construção e iluminação</h4>
                 </div>
                 <div class="product-section">
-                    <div class="objects">
-                        <div class="object">
-                            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="assets/images/1738866-linda-agua-azul-em-uma-praia-tropical-foto.jpg class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                              <h5 class="card-title">Card title</h5>
-                                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                                            </div>
-                                          </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="..." class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                              <h5 class="card-title">Card title</h5>
-                                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                                            </div>
-                                          </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="..." class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                              <h5 class="card-title">Card title</h5>
-                                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                                            </div>
-                                          </div>
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                                </div>
+                    <div class="container-fluid objects">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/4881312-sunset-on-maldives-island-luxury-water-villas-resort-and-wooden-pier-beautiful-sky-and-clouds-and-beach-background-for-summer-vacation-holiday-and-travel-concept-foto.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/1738866-linda-agua-azul-em-uma-praia-tropical-foto.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="category-title">
-                    <h4>Categoria 3</h4>
+                    <h4>Jogos e brinquedos</h4>
                 </div>
                 <div class="product-section">
-                    <div class="objects">
-                        <div class="object">
-                            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="assets/images/1738866-linda-agua-azul-em-uma-praia-tropical-foto.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                              <h5 class="card-title">Card title</h5>
-                                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                                            </div>
-                                          </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="..." class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                              <h5 class="card-title">Card title</h5>
-                                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                                            </div>
-                                          </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="..." class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                              <h5 class="card-title">Card title</h5>
-                                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                                            </div>
-                                          </div>
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                                </div>
+                    <div class="container-fluid objects">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/4881312-sunset-on-maldives-island-luxury-water-villas-resort-and-wooden-pier-beautiful-sky-and-clouds-and-beach-background-for-summer-vacation-holiday-and-travel-concept-foto.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/1738866-linda-agua-azul-em-uma-praia-tropical-foto.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="category-title">
-                    <h4>Categoria 4</h4>
-                </div>
-                <div class="product-section">
-                    <div class="objects">
-                        <div class="object">
-                            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="..." class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                              <h5 class="card-title">Card title</h5>
-                                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                                            </div>
-                                          </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="..." class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                              <h5 class="card-title">Card title</h5>
-                                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                                            </div>
-                                          </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="card" style="width: 18rem;">
-                                            <img src="..." class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                              <h5 class="card-title">Card title</h5>
-                                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                                            </div>
-                                          </div>
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </main>
