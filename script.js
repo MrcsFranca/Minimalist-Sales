@@ -18,18 +18,20 @@
   fetch('https://api.mercadolibre.com/sites/MLB/search?q=${query}')
   	.then(res => res.json())
   	.then((json) => {
+		console.log(json);
 		console.log(json.results);
 		const ul = document.getElementById('productList')
 		json.results.forEach((item) => {
-			const li = document.createElement("div.container-fluid.object")
+			const li = document.createElement("div.container-fluid")
 			li.innerHTML = `
-				<div class="card" style="width: 18rem;">
-					<img src="${item.thumbnail}">
-						<h5 class="card-title">${item.title}</h5>
-						<p class="card-text">${item.price}</p>
-						<a href="${item.permalink}" class="btn btn-primary">Veja o produto no site</a>
-					</div>
-				</div>
+			<div class="card" style="width: 18rem;">
+  				<img src="${item.thumbnail}" class="card-img-top" alt="...">
+  				<div class="card-body">
+    				<h5 class="card-title">${item.title}</h5>
+					<p class="card-text">${item.price}</p>
+    				<a href="${item.permalink}" target="_blank" class="btn btn-primary">Go somewhere</a>
+  				</div>
+			</div>
 			`
 			ul.appendChild(li)
 		})
