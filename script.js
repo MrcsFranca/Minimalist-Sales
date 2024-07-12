@@ -28,8 +28,8 @@
   				<img src="${item.thumbnail}" class="card-img-top" alt="...">
   				<div class="card-body">
     				<h5 class="card-title">${item.title}</h5>
-					<p class="card-text">${item.price}</p>
-    				<a href="${item.permalink}" target="_blank" class="btn btn-primary">Go somewhere</a>
+					<p class="card-text">R$${item.price}</p>
+    				<a href="${item.permalink}" target="_blank" class="btn btn-primary">Vá para o site de origem</a>
   				</div>
 			</div>
 			`
