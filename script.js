@@ -1,21 +1,19 @@
-// const fetchProducts = async (query) => {
-// 	const response = await fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${query}`);
-// 	const data = await response.json();
-// 	return data.results;
-//   };
-//   const fetchByID = async(id)=>{
-// 	const response = await fetch(`https://api.mercadolibre.com/items/${id}`);
-// 	const data = await response.json();
-// 	console.log(data)
-// 	return data[0].body;
-//   }
-//   export default fetchProducts;
-//   export {fetchByID};
+const form = document.getElementById('form')
+const searchInput = document.getElementById('search-bar')
 
-//   console.log(fetchProducts('celular'))
-//   console.log(fetchByID('MLB3740141311'))
 
-fetch('https://api.mercadolibre.com/sites/MLB/search?q=${query}')
+
+form.addEventListener("submit", (submission) => {
+	submission.preventDefault()
+	
+	console.log(searchInput.value)
+
+	const searched = document.getElementById('searched')
+	const title = document.createElement('div')
+	title.innerHTML = `<h4>Resultado de: ${searchInput.value}</h4>`
+	searched.appendChild(title)
+
+	fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${searchInput.value}`)
 	.then(res => res.json())
 	.then((json) => {
 		console.log(json);
@@ -36,77 +34,22 @@ fetch('https://api.mercadolibre.com/sites/MLB/search?q=${query}')
 			ul.appendChild(li)
 		})
 	})
-export function filtrar() {
-	var input,
-		filter,
-		ul,
-		li,
-		a,
-		i,
-		txtValue,
-		cout = 0,
-		span
-
-	// pegar elementos
-	input = document.getElementById('search-bar');
-	ul = document.getElementById('productList');
-
-	// filtro
-	filter = input.value.toUpperCase();
-
-	// pegar LI´s da lista
-	li = ul.getElementsByTagName("li");
-
-	console.log(li);
-
-	//percorrer li
-
-	for (i = 0; i < li.length; i++) {
-		a = li[i].getElementsByTagName("a")[0];
-
-		txtValue = a.textContent || a.innerText;
-
-		// verifica se o valor que o usuario digitou é correto
-		if (txtValue.toUpperCase().indexOf(filter) > - 1) {
-			// valor bateu
-			li[i].style.display = "";
-			cout++
-			span = li[i].querySelector(".item-title");
-
-			if (span) {
-				span.innerHTML = txtValue.replace(new RegExp(filter, "gi"), (match) => {
-					return "<strong>" + match + "</strong>";
-				})
-			}
-		}
-		else {
-			//não mostra o item da lista
-			li[i].style.display = "none";
-		}
-	}
-}
+})
 
 
+// const fetchProducts = async (query) => {
+// 	const response = await fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${query}`);
+// 	const data = await response.json();
+// 	return data.results;
+//   };
+//   const fetchByID = async(id)=>{
+// 	const response = await fetch(`https://api.mercadolibre.com/items/${id}`);
+// 	const data = await response.json();
+// 	console.log(data)
+// 	return data[0];
+//   }
+//   export default fetchProducts;
+//   export {fetchByID};
 
-
-
-
-// fetch('', options)
-// 	.then(res => res.json())
-// 	.then((json) => {
-// 		const ul = document.getElementById('productList')
-// 		// json.forEach(() => {
-// 		// 	const li = document.createElement("div.container-fluid.object")
-// 		// 	li.innerHTML = `
-// 		// 		<div class="card" style="width: 18rem;">
-// 		// 			<img src="${}">
-// 		// 				<h5 class="card-title">${}</h5>
-// 		// 				<p class="card-text">${}</p>
-// 		// 				<a href="${}" class="btn btn-primary">Veja o produto no site</a>
-// 		// 			</div>
-// 		// 		</div>
-// 		// 	`
-// 		// })
-// 		console.log(json)
-// 		})
-// 	// })
+//   console.log(fetchProducts("input[type='search']"))
+//   fetchByID('MLB3776939437')
