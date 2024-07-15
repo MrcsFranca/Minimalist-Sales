@@ -17,7 +17,8 @@ form.addEventListener("submit", (submission) => {
 	searchResult.innerHTML = `<h4>Resultado de: ${searchInput.value}</h4>`
 	
 	searched.appendChild(searchResult)
-
+	
+	ul.textContent = ""
 	fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${searchInput.value}`)
 	.then(res => res.json())
 	.then((json) => {
@@ -38,21 +39,3 @@ form.addEventListener("submit", (submission) => {
 	})
 	searchInput.value = ""
 })
-
-
-// const fetchProducts = async (query) => {
-// 	const response = await fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${query}`);
-// 	const data = await response.json();
-// 	return data.results;
-//   };
-//   const fetchByID = async(id)=>{
-// 	const response = await fetch(`https://api.mercadolibre.com/items/${id}`);
-// 	const data = await response.json();
-// 	console.log(data)
-// 	return data[0];
-//   }
-//   export default fetchProducts;
-//   export {fetchByID};
-
-//   console.log(fetchProducts("input[type='search']"))
-//   fetchByID('MLB3776939437')

@@ -19,7 +19,7 @@
     margin: 20px;
 }
 
-.product-section {
+#productList {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -31,10 +31,10 @@
 
 .card {
     overflow: hidden;
+    transition: all 0.6s;
 }
 .card:hover {
     transform: scale(1.15);
-    transition: all 0.6s;
 } 
 
 .product-section{
