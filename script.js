@@ -19,10 +19,11 @@ form.addEventListener("submit", (submission) => {
 	searched.appendChild(searchResult)
 	
 	ul.textContent = ""
-	fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${searchInput.value}`)
+	fetch(`https://dummyjson.com/products/search?q=${searchInput.value}`)
 	.then(res => res.json())
 	.then((json) => {
-		json.results.forEach((item) => {
+		json.products.forEach((item) => {
+			console.log(json)
 			li = document.createElement("div.container-fluid")
 			li.innerHTML = `
 			<div class="card" style="width: 18rem;">
