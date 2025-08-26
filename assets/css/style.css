@@ -17,6 +17,10 @@
 
 .search-bar {
     margin: 20px;
+    box-sizing: border-box;
+    border: 3px, solid, black;
+    border-radius: 1px;
+    padding: 1px 1px;
 }
 
 #productList {
@@ -37,7 +41,7 @@
     transform: scale(1.15);
 } 
 
-.product-section{
+.product-section {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -45,4 +49,6 @@
 }
 .card {
     flex-grow: 1;
+    background-color: rgb(56, 54, 54);
+    border: 2px, solid, rgb(56, 54, 54);
 }

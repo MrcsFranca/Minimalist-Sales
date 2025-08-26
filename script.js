@@ -27,7 +27,7 @@ form.addEventListener("submit", (submission) => {
 			li = document.createElement("div.container-fluid")
 			li.innerHTML = `
 			<div class="card" style="width: 18rem;">
-  				<img src="${item.thumbnail}" class="card-img-top" style="max-width: 190px; align-self: center;" alt="...">
+  				<img alt="Imagem de um dos produtos pesquisados" src="${item.thumbnail}" class="card-img-top" style="max-width: 190px; align-self: center;" alt="...">
   				<div class="card-body">
     				<h5 class="card-title">${item.title}</h5>
 					<p class="card-text">R$${item.price}</p>
